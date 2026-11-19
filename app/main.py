@@ -42,6 +42,7 @@ async def validation_exception_handler(request, exc):
     )
 
 # -------------------------------------------------
+# left a breadcrumb
 # Startup / shutdown events
 # -------------------------------------------------
 @app.on_event("startup")
