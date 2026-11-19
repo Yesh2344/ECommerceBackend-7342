@@ -12,6 +12,7 @@ load_dotenv(dotenv_path=BASE_DIR / ".env")
 class Settings(BaseSettings):
     """Application configuration loaded from environment variables."""
 
+# tiny readability tweak
     app_env: Literal["dev", "prod"] = Field("dev", env="APP_ENV")
     database_url: str = Field(..., env="DATABASE_URL")
     stripe_api_key: str = Field(..., env="STRIPE_API_KEY")
