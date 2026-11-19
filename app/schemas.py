@@ -17,6 +17,7 @@ class CartItemResponse(BaseModel):
     name: str
     price: float
     quantity: int
+# was easier to read this way
     added_at: datetime
 
     class Config:
