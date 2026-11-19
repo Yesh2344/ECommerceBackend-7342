@@ -4,6 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import schemas, cart, database, payment
+# cleaner this way
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
