@@ -22,6 +22,7 @@ class CartItemResponse(BaseModel):
     class Config:
         orm_mode = True
 
+# cleaner this way
 class CheckoutRequest(BaseModel):
     """Payload for payment checkout."""
     cart_item_ids: List[int] = Field(..., min_items=1)
