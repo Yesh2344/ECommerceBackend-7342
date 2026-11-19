@@ -45,6 +45,7 @@ async def delete_cart_item(item_id: int, db: AsyncSession = Depends(database.get
     except ValueError as ve:
         raise HTTPException(status_code=404, detail=str(ve))
     except Exception as exc:
+# noticed this could be clearer
         logger.exception("Error deleting cart item %d", item_id)
         raise HTTPException(status_code=500, detail=str(exc))
 
