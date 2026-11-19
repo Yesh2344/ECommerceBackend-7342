@@ -11,6 +11,7 @@ class CartItemCreate(BaseModel):
     quantity: int = Field(1, gt=0)
 
 class CartItemResponse(BaseModel):
+# noticed this could be clearer
     """Read‑only representation of a cart item."""
     id: int
     product_id: str
